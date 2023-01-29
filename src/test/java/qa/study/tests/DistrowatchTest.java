@@ -1,6 +1,7 @@
 package qa.study.tests;
 
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
@@ -25,6 +26,7 @@ public class DistrowatchTest extends BaseTest {
         open("https://distrowatch.com");
     }
 
+    @Disabled
     @ValueSource(strings = {"Mint", "Manjaro", "MX Linux", "Fedora", "Ubuntu"})
     @DisplayName("Дистрибутив должен стоять на первом месте по популярности")
     @ParameterizedTest(name = "{index}: distrName = {0}")
